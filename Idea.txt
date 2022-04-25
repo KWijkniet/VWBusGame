@@ -1,0 +1,4 @@
+GAME: (AR)
+je hebt een volkswagen bus. klik op het scherm om waypoints te maken. zodra je klaar ben kan je op de knop drukken om de bus te besturen (gas/brake). deze stuurt zelf naar de waypoints. (denk aan zo'n oude race kit)
+
+de bus kan uit de bocht vliegen en hierdoor van de baan raken. deze baan word gegenereerd op basis van de waypoints (Bezier curves)

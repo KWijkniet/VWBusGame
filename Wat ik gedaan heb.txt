@@ -1,0 +1,20 @@
+Hier staan alle problemen en leer punten waar ik tegenaan gelopen ben en waarom het project er uitziet zoals het nu is.
+
+als eerste wil ik zeggen dat ik begon aan dit project zonder enige kennis van "mesh generation", AI (voor voertuigen) of "bezier curves".
+
+als eerste begon ik met het maken van een simpele mesh. geen speciale vormen of wat dan ook. hier merkte ik al direct dat de berekeningen voor zo'n simpel iets al best lastig waren en dat ik nergens goede uitleg kon vinden over waarom het zo moet. (ook waren er bijna geen tutorials/documentation voor het maken van een mesh met aparte vormen. ze lieten altijd alleenmaar zien hoe je een vierkant moet maken en dan de hoogte kan aanpassen van bepaalde punten).
+
+hierna met het kleine beetje kennis wat ik had begon ik aan het maken van een path generator. dit ging in het begin aardig goed. (dit was een simpele lijn van waypoint naar waypoint).
+hierna moest het gaan werken met bezier curve. dit leverde al een aantal problemen. 1: documentatie was duidelijk als je max 3 points had. 2: dit werkt goed zodra je 1 punt heb met 2 controll points ernaast.
+
+probleem 1 was aardig makelijk opgelost maar punt 2 lukte alleenmaar door 1 punt meerdere keren in de lijst te zetten.
+
+hierna kwamen ook nog wat kleine problemen zoals de breedte van de path. en hoe ik de rotatie van de objecten correct moest neerzetten zodat het path goed gegenereerd zou worden.
+
+het pad lukte alleenmaar in 2d. ik kon nergens vinden over het maken van een cube via mesh generation en het lukte het mij ook niet.
+
+hierna ben ik begonnen aan een ai system. de ai die ik had zat vast aan de road (volgde altijd perfect het midden van het pad). dit had wel het probleem dat de gebruiker geen controlle had over snelheid en dit zou dus ook betekenen dat de bus nooit uit de bocht zou kunnen vliegen of een idee van een spel kunnen geven zoals we graag zouden willen zien.
+
+het 2de ai dat ik geprobeerd had was een navmesh agent. dat is een ingebouwd ai systeem (gebruikt a* pathfinding algorithm) maar deze probeerde altijd aan de buitekant van het pad te komen en ging soms zelfs de verkeerde kant op. deze manier werkte dus ook niet.
+
+hierna vond ik een ai systeem van unity zelf. het is een car controller die een geprogrammeerde pad volgt. de challenge was dus om dit om te zetten naar een berekend pad die constant kon veranderen zonder problemen te geven. dit werkt nu ook aardig goed maar wat je nu soms heb is dat het ai voorbij de waypoint gaat zonder iets te triggeren waardoor die een rondje moet draaien om de waypoint te kunnen triggeren.
